@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTOCAR - Vista Principal</title>
+    <link rel="stylesheet" type="text/css" href="styles_main.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ReservApp</h1>
+            <div class="buttons">
+                <a href="#"><button>Reservar</button></a>
+                <a href="login_register.html"><button>Iniciar sesión/ Registro</button></a>
+            </div>
+        </header>
+        <main>
+            <div class="menu">
+                <div class="menu">
+                    <div class="menu-item">
+                        <img src="img/image.png" alt="Dish 1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <span>S/. **.**</span>
+                        <button class="info-button">Más información</button>
+                        <div class="popup">
+                            <img src="img/image.png" alt="Dish 1">
+                            <h3>Detalle del Platillo</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+                            <span>S/. **.**</span>
+                            <button class="close-button">Cerrar</button>
+                        </div>
+                    </div>              
+                <div class="menu-item">
+                    <img src="img/image (1).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image (2).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image (3).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image.png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image (1).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image (2).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+                <div class="menu-item">
+                    <img src="img/image (3).png" alt="Dish 1">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <span>S/. **.**</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const infoButtons = document.querySelectorAll('.info-button');
+            const closeButtons = document.querySelectorAll('.close-button');
+
+            infoButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const popup = this.nextElementSibling;
+                    popup.style.display = 'block';
+                });
+            });
+
+            closeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const popup = this.parentElement;
+                    popup.style.display = 'none';
+                });
+            });
+        });
+    </script>    
+        
+</body>
+</html>
